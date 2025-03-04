@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="left">
-            <ul>
+            <ul class="flex">
                 <li>
                     <RouterLink to="/career">Career</RouterLink>
                 </li>
@@ -10,7 +10,7 @@
             </ul>
         </div>
         <div class="right">
-            <ul>
+            <ul class="flex">
                 <li>git</li>
                 <li>카카오</li>
             </ul>

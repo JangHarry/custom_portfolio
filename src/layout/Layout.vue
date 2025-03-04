@@ -1,11 +1,9 @@
 <template>
     <Header />
     <router-view v-slot="{ Component }">
-        <transition name="fade">
-            <keep-alive>
-                <component :is="Component" />
-            </keep-alive>
-        </transition>
+        <keep-alive>
+            <component :is="Component" />
+        </keep-alive>
     </router-view>
     <Footer />
 </template>

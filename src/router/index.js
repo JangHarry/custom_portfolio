@@ -11,7 +11,23 @@ const constantRoutes = [
                 name: '메인페이지',
                 component: () => import('@/views/index.vue'),
             },
+            {
+                path: '/career',
+                name: 'career',
+                component: () => import('@/views/career'),
+            },
+            {
+                path: '/portfolio',
+                name: 'portfolio',
+                component: () => import('@/views/portfolio'),
+            },
+            {
+                path: '/contact',
+                name: 'contact',
+                component: () => import('@/views/contact'),
+            },
         ],
+        redirect: '/main',
     },
     {
         path: '/404',

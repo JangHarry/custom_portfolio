@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/* CSS Document */
+/* CSS Document */
+/**********************************
+* reset
+**********************************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+  outline: 0 solid transparent;
+  box-shadow: 0 0 0 transparent;
+  font-family: inherit;
+  text-shadow: 0 0 0 transparent;
+  box-sizing: border-box;
+  background: transparent none center center no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+u,
+s,
+ins,
+del {
+  text-decoration: none;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+select,
+textarea,
+mark {
+  color: inherit;
+  font: inherit;
+}
+
+label,
+button,
+a {
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: inherit;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input,
+select,
+button,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* [type=checkbox],[type=radio] {display: none;} */
+img:only-child {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+/**********************************
+* hack
+**********************************/
+/* Only works in IE10 이상 (IE11도 포함)*/
+_:-ms-fullscreen,
+:root button {
+  overflow: visible;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0 100vw #fff inset;
+}
+
+/* Mobile Touch 후 깜빡임 제거 */
+input,
+select,
+textarea,
+button,
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* input 초기화 버튼 hidden - IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+/* input 초기화 버튼 hidden - 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* 스크롤 스타일 설정 */
+*::-webkit-scrollbar {
+  width: 1rem; /* (세로)스크롤바의 너비 */
+  height: 1rem; /* (가로)스크롤바의 높이 */
+  background: #fff; /*스크롤바 뒷 배경 색상*/
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a7abb1; /* 스크롤바의 색상 */
+  border-radius: 0.4rem;
+  border-left: 0.2rem solid #fff;
+  border-right: 0.2rem solid #fff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #8d8f95;
+}
+
+*::-webkit-scrollbar-track {
+  margin: 0.4rem 0;
+}
+
+/* SCSS Document */
+/**********************************
+* Frame - 기본구조정의
+/**********************************/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  background-color: #ecebf5;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#app[user-scalable=false], #app[user-scalable=false] ~ * * {
+  touch-action: pan-y;
+}
+
+main#container {
+  position: relative;
+  z-index: 1;
+  width: 144rem;
+  height: 85.2rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
